@@ -1,0 +1,1143 @@
+-- Gui to Lua
+-- Version: 3.1
+
+-- Instances:
+
+local BingoSSGui = Instance.new("ScreenGui")
+local Start = Instance.new("Frame")
+local Title = Instance.new("TextLabel")
+local Start_2 = Instance.new("TextButton")
+local Exit = Instance.new("TextButton")
+local Show = Instance.new("TextButton")
+local Minimized = Instance.new("Frame")
+local Title_2 = Instance.new("TextLabel")
+local line = Instance.new("Frame")
+local Normal = Instance.new("TextButton")
+local Executor = Instance.new("Frame")
+local Title_3 = Instance.new("TextLabel")
+local line_2 = Instance.new("Frame")
+local Execute = Instance.new("TextButton")
+local Clear = Instance.new("TextButton")
+local HideText = Instance.new("TextButton")
+local ShowText = Instance.new("TextButton")
+local R6 = Instance.new("TextButton")
+local EditorFrame = Instance.new("ScrollingFrame")
+local Source = Instance.new("TextBox")
+local Comments_ = Instance.new("TextLabel")
+local Globals_ = Instance.new("TextLabel")
+local Keywords_ = Instance.new("TextLabel")
+local RemoteHighlight_ = Instance.new("TextLabel")
+local Strings_ = Instance.new("TextLabel")
+local Tokens_ = Instance.new("TextLabel")
+local Numbers_ = Instance.new("TextLabel")
+local Lines = Instance.new("TextLabel")
+local exitexecutor = Instance.new("TextButton")
+local mini = Instance.new("TextButton")
+local ScriptHub = Instance.new("ScrollingFrame")
+local MML = Instance.new("TextButton")
+local DJ = Instance.new("TextButton")
+local Cop = Instance.new("TextButton")
+local KERGUI = Instance.new("TextButton")
+local CharaX = Instance.new("TextButton")
+local Inferno = Instance.new("TextButton")
+local GSlayer = Instance.new("TextButton")
+local TGui = Instance.new("TextButton")
+local NSG = Instance.new("TextButton")
+local Exo = Instance.new("TextButton")
+local TRifle = Instance.new("TextButton")
+
+--Properties:
+
+BingoSSGui.Name = "BingoSSGui"
+BingoSSGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+BingoSSGui.ResetOnSpawn = false
+
+Start.Name = "Start"
+Start.Parent = BingoSSGui
+Start.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Start.BackgroundTransparency = 0.500
+Start.Size = UDim2.new(1, 0, 1, 0)
+
+Title.Name = "Title"
+Title.Parent = Start
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.Position = UDim2.new(0.354700863, 0, 0.0741324946, 0)
+Title.Size = UDim2.new(0, 340, 0, 85)
+Title.Font = Enum.Font.Highway
+Title.Text = "Bingo SS"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextScaled = true
+Title.TextSize = 14.000
+Title.TextWrapped = true
+
+Start_2.Name = "Start"
+Start_2.Parent = Start
+Start_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Start_2.BackgroundTransparency = 1.000
+Start_2.Position = UDim2.new(0.354700863, 0, 0.260252386, 0)
+Start_2.Size = UDim2.new(0, 340, 0, 49)
+Start_2.Font = Enum.Font.Highway
+Start_2.Text = "Start"
+Start_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Start_2.TextScaled = true
+Start_2.TextSize = 14.000
+Start_2.TextWrapped = true
+
+Exit.Name = "Exit"
+Exit.Parent = Start
+Exit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Exit.BackgroundTransparency = 1.000
+Exit.Position = UDim2.new(0.354700863, 0, 0.337539434, 0)
+Exit.Size = UDim2.new(0, 340, 0, 49)
+Exit.Font = Enum.Font.Highway
+Exit.Text = "Exit"
+Exit.TextColor3 = Color3.fromRGB(255, 255, 255)
+Exit.TextScaled = true
+Exit.TextSize = 14.000
+Exit.TextWrapped = true
+
+Show.Name = "Show"
+Show.Parent = BingoSSGui
+Show.BackgroundColor3 = Color3.fromRGB(42, 42, 42)
+Show.BorderColor3 = Color3.fromRGB(85, 170, 255)
+Show.BorderSizePixel = 3
+Show.Position = UDim2.new(0.00854700897, 0, 0.917981088, 0)
+Show.Size = UDim2.new(0, 91, 0, 40)
+Show.Visible = false
+Show.AutoButtonColor = false
+Show.Font = Enum.Font.SourceSans
+Show.Text = "Show"
+Show.TextColor3 = Color3.fromRGB(255, 255, 255)
+Show.TextScaled = true
+Show.TextSize = 14.000
+Show.TextWrapped = true
+
+Minimized.Name = "Minimized"
+Minimized.Parent = BingoSSGui
+Minimized.BackgroundColor3 = Color3.fromRGB(42, 42, 42)
+Minimized.BorderSizePixel = 0
+Minimized.Position = UDim2.new(0.229000002, 0, 0.202999994, 0)
+Minimized.Size = UDim2.new(0, 655, 0, 59)
+Minimized.Visible = false
+
+Title_2.Name = "Title"
+Title_2.Parent = Minimized
+Title_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_2.BackgroundTransparency = 2.000
+Title_2.Position = UDim2.new(-0.00114988151, 0, -0.00049754919, 0)
+Title_2.Size = UDim2.new(0, 196, 0, 50)
+Title_2.Font = Enum.Font.Highway
+Title_2.Text = "Bingo SS"
+Title_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_2.TextScaled = true
+Title_2.TextSize = 14.000
+Title_2.TextWrapped = true
+
+line.Name = "line"
+line.Parent = Minimized
+line.BackgroundColor3 = Color3.fromRGB(85, 170, 255)
+line.BorderSizePixel = 0
+line.Position = UDim2.new(0.00985843502, 0, 0.85934484, 0)
+line.Size = UDim2.new(0, 641, 0, 8)
+
+Normal.Name = "Normal"
+Normal.Parent = Minimized
+Normal.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Normal.BackgroundTransparency = 1.000
+Normal.Position = UDim2.new(0.910980642, 0, -0.0140886605, 0)
+Normal.Size = UDim2.new(0, 50, 0, 50)
+Normal.Font = Enum.Font.SourceSans
+Normal.Text = "+"
+Normal.TextColor3 = Color3.fromRGB(255, 255, 255)
+Normal.TextScaled = true
+Normal.TextSize = 14.000
+Normal.TextWrapped = true
+
+Executor.Name = "Executor"
+Executor.Parent = BingoSSGui
+Executor.BackgroundColor3 = Color3.fromRGB(42, 42, 42)
+Executor.BorderSizePixel = 0
+Executor.Position = UDim2.new(0.229059845, 0, 0.203470021, 0)
+Executor.Size = UDim2.new(0, 655, 0, 359)
+Executor.Visible = false
+
+Title_3.Name = "Title"
+Title_3.Parent = Executor
+Title_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_3.BackgroundTransparency = 2.000
+Title_3.Position = UDim2.new(-0.00114988373, 0, 0.00596644171, 0)
+Title_3.Size = UDim2.new(0, 196, 0, 47)
+Title_3.Font = Enum.Font.Highway
+Title_3.Text = "Bingo SS"
+Title_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_3.TextScaled = true
+Title_3.TextSize = 14.000
+Title_3.TextWrapped = true
+
+line_2.Name = "line"
+line_2.Parent = Executor
+line_2.BackgroundColor3 = Color3.fromRGB(85, 170, 255)
+line_2.BorderSizePixel = 0
+line_2.Position = UDim2.new(0.011385153, 0, 0.164429516, 0)
+line_2.Size = UDim2.new(0, 641, 0, 8)
+
+Execute.Name = "Execute"
+Execute.Parent = Executor
+Execute.BackgroundColor3 = Color3.fromRGB(42, 42, 42)
+Execute.BorderColor3 = Color3.fromRGB(85, 170, 255)
+Execute.BorderSizePixel = 3
+Execute.Position = UDim2.new(0.0100737363, 0, 0.826579511, 0)
+Execute.Size = UDim2.new(0, 157, 0, 53)
+Execute.AutoButtonColor = false
+Execute.Font = Enum.Font.SourceSans
+Execute.Text = "Execute"
+Execute.TextColor3 = Color3.fromRGB(255, 255, 255)
+Execute.TextScaled = true
+Execute.TextSize = 14.000
+Execute.TextWrapped = true
+
+Clear.Name = "Clear"
+Clear.Parent = Executor
+Clear.BackgroundColor3 = Color3.fromRGB(42, 42, 42)
+Clear.BorderColor3 = Color3.fromRGB(85, 170, 255)
+Clear.BorderSizePixel = 3
+Clear.Position = UDim2.new(0.268088996, 0, 0.826579511, 0)
+Clear.Size = UDim2.new(0, 157, 0, 53)
+Clear.AutoButtonColor = false
+Clear.Font = Enum.Font.SourceSans
+Clear.Text = "Clear"
+Clear.TextColor3 = Color3.fromRGB(255, 255, 255)
+Clear.TextScaled = true
+Clear.TextSize = 14.000
+Clear.TextWrapped = true
+
+HideText.Name = "HideText"
+HideText.Parent = Executor
+HideText.BackgroundColor3 = Color3.fromRGB(42, 42, 42)
+HideText.BorderColor3 = Color3.fromRGB(85, 170, 255)
+HideText.BorderSizePixel = 3
+HideText.Position = UDim2.new(0.632974446, 0, 0.826579511, 0)
+HideText.Size = UDim2.new(0, 177, 0, 53)
+HideText.AutoButtonColor = false
+HideText.Font = Enum.Font.SourceSans
+HideText.Text = "Hide Text"
+HideText.TextColor3 = Color3.fromRGB(255, 255, 255)
+HideText.TextScaled = true
+HideText.TextSize = 14.000
+HideText.TextWrapped = true
+
+ShowText.Name = "ShowText"
+ShowText.Parent = Executor
+ShowText.BackgroundColor3 = Color3.fromRGB(42, 42, 42)
+ShowText.BorderColor3 = Color3.fromRGB(85, 170, 255)
+ShowText.BorderSizePixel = 3
+ShowText.Position = UDim2.new(0.632974446, 0, 0.826579511, 0)
+ShowText.Size = UDim2.new(0, 177, 0, 53)
+ShowText.Visible = false
+ShowText.AutoButtonColor = false
+ShowText.Font = Enum.Font.SourceSans
+ShowText.Text = "Show Text"
+ShowText.TextColor3 = Color3.fromRGB(255, 255, 255)
+ShowText.TextScaled = true
+ShowText.TextSize = 14.000
+ShowText.TextWrapped = true
+
+R6.Name = "R6"
+R6.Parent = Executor
+R6.BackgroundColor3 = Color3.fromRGB(42, 42, 42)
+R6.BorderColor3 = Color3.fromRGB(85, 170, 255)
+R6.BorderSizePixel = 3
+R6.Position = UDim2.new(0.526104212, 0, 0.826579511, 0)
+R6.Size = UDim2.new(0, 59, 0, 53)
+R6.AutoButtonColor = false
+R6.Font = Enum.Font.SourceSans
+R6.Text = "R6"
+R6.TextColor3 = Color3.fromRGB(255, 255, 255)
+R6.TextScaled = true
+R6.TextSize = 14.000
+R6.TextWrapped = true
+
+EditorFrame.Name = "EditorFrame"
+EditorFrame.Parent = Executor
+EditorFrame.BackgroundColor3 = Color3.fromRGB(54, 54, 54)
+EditorFrame.BorderSizePixel = 0
+EditorFrame.Position = UDim2.new(0, 6, 0, 74)
+EditorFrame.Size = UDim2.new(0, 640, 0, 207)
+EditorFrame.CanvasSize = UDim2.new(0, 0, 50, 0)
+EditorFrame.ScrollBarThickness = 10
+
+Source.Name = "Source"
+Source.Parent = EditorFrame
+Source.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Source.BackgroundTransparency = 1.000
+Source.Position = UDim2.new(0, 30, 0, 0)
+Source.Size = UDim2.new(1, 0, 1, 0)
+Source.ZIndex = 3
+Source.ClearTextOnFocus = false
+Source.Font = Enum.Font.Code
+Source.MultiLine = true
+Source.PlaceholderColor3 = Color3.fromRGB(204, 204, 204)
+Source.Text = "print(\"Bye world!\")"
+Source.TextColor3 = Color3.fromRGB(204, 204, 204)
+Source.TextSize = 15.000
+Source.TextXAlignment = Enum.TextXAlignment.Left
+Source.TextYAlignment = Enum.TextYAlignment.Top
+
+Comments_.Name = "Comments_"
+Comments_.Parent = Source
+Comments_.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Comments_.BackgroundTransparency = 1.000
+Comments_.Size = UDim2.new(1, 0, 1, 0)
+Comments_.ZIndex = 5
+Comments_.Font = Enum.Font.Code
+Comments_.Text = ""
+Comments_.TextColor3 = Color3.fromRGB(59, 200, 59)
+Comments_.TextSize = 15.000
+Comments_.TextXAlignment = Enum.TextXAlignment.Left
+Comments_.TextYAlignment = Enum.TextYAlignment.Top
+
+Globals_.Name = "Globals_"
+Globals_.Parent = Source
+Globals_.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Globals_.BackgroundTransparency = 1.000
+Globals_.Size = UDim2.new(1, 0, 1, 0)
+Globals_.ZIndex = 5
+Globals_.Font = Enum.Font.Code
+Globals_.Text = ""
+Globals_.TextColor3 = Color3.fromRGB(132, 214, 247)
+Globals_.TextSize = 15.000
+Globals_.TextXAlignment = Enum.TextXAlignment.Left
+Globals_.TextYAlignment = Enum.TextYAlignment.Top
+
+Keywords_.Name = "Keywords_"
+Keywords_.Parent = Source
+Keywords_.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Keywords_.BackgroundTransparency = 1.000
+Keywords_.Size = UDim2.new(1, 0, 1, 0)
+Keywords_.ZIndex = 5
+Keywords_.Font = Enum.Font.Code
+Keywords_.Text = ""
+Keywords_.TextColor3 = Color3.fromRGB(248, 109, 124)
+Keywords_.TextSize = 15.000
+Keywords_.TextXAlignment = Enum.TextXAlignment.Left
+Keywords_.TextYAlignment = Enum.TextYAlignment.Top
+
+RemoteHighlight_.Name = "RemoteHighlight_"
+RemoteHighlight_.Parent = Source
+RemoteHighlight_.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+RemoteHighlight_.BackgroundTransparency = 1.000
+RemoteHighlight_.Size = UDim2.new(1, 0, 1, 0)
+RemoteHighlight_.ZIndex = 5
+RemoteHighlight_.Font = Enum.Font.Code
+RemoteHighlight_.Text = ""
+RemoteHighlight_.TextColor3 = Color3.fromRGB(0, 144, 255)
+RemoteHighlight_.TextSize = 15.000
+RemoteHighlight_.TextXAlignment = Enum.TextXAlignment.Left
+RemoteHighlight_.TextYAlignment = Enum.TextYAlignment.Top
+
+Strings_.Name = "Strings_"
+Strings_.Parent = Source
+Strings_.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Strings_.BackgroundTransparency = 1.000
+Strings_.Size = UDim2.new(1, 0, 1, 0)
+Strings_.ZIndex = 5
+Strings_.Font = Enum.Font.Code
+Strings_.Text = ""
+Strings_.TextColor3 = Color3.fromRGB(173, 241, 149)
+Strings_.TextSize = 15.000
+Strings_.TextXAlignment = Enum.TextXAlignment.Left
+Strings_.TextYAlignment = Enum.TextYAlignment.Top
+
+Tokens_.Name = "Tokens_"
+Tokens_.Parent = Source
+Tokens_.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Tokens_.BackgroundTransparency = 1.000
+Tokens_.Size = UDim2.new(1, 0, 1, 0)
+Tokens_.ZIndex = 5
+Tokens_.Font = Enum.Font.Code
+Tokens_.Text = ""
+Tokens_.TextColor3 = Color3.fromRGB(255, 255, 255)
+Tokens_.TextSize = 15.000
+Tokens_.TextXAlignment = Enum.TextXAlignment.Left
+Tokens_.TextYAlignment = Enum.TextYAlignment.Top
+
+Numbers_.Name = "Numbers_"
+Numbers_.Parent = Source
+Numbers_.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Numbers_.BackgroundTransparency = 1.000
+Numbers_.Size = UDim2.new(1, 0, 1, 0)
+Numbers_.ZIndex = 4
+Numbers_.Font = Enum.Font.Code
+Numbers_.Text = ""
+Numbers_.TextColor3 = Color3.fromRGB(255, 198, 0)
+Numbers_.TextSize = 15.000
+Numbers_.TextXAlignment = Enum.TextXAlignment.Left
+Numbers_.TextYAlignment = Enum.TextYAlignment.Top
+
+Lines.Name = "Lines"
+Lines.Parent = EditorFrame
+Lines.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Lines.BackgroundTransparency = 1.000
+Lines.Size = UDim2.new(0, 30, 1, 0)
+Lines.ZIndex = 4
+Lines.Font = Enum.Font.Code
+Lines.Text = "1"
+Lines.TextColor3 = Color3.fromRGB(255, 255, 255)
+Lines.TextSize = 15.000
+Lines.TextYAlignment = Enum.TextYAlignment.Top
+
+exitexecutor.Name = "exitexecutor"
+exitexecutor.Parent = Executor
+exitexecutor.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+exitexecutor.BackgroundTransparency = 1.000
+exitexecutor.BorderSizePixel = 0
+exitexecutor.Position = UDim2.new(0.912163973, 0, -0.00239010435, 0)
+exitexecutor.Size = UDim2.new(0, 50, 0, 59)
+exitexecutor.Font = Enum.Font.SourceSans
+exitexecutor.Text = "X"
+exitexecutor.TextColor3 = Color3.fromRGB(255, 255, 255)
+exitexecutor.TextScaled = true
+exitexecutor.TextSize = 14.000
+exitexecutor.TextWrapped = true
+
+mini.Name = "mini"
+mini.Parent = Executor
+mini.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+mini.BackgroundTransparency = 1.000
+mini.BorderSizePixel = 0
+mini.Position = UDim2.new(0.835828125, 0, -0.00239010435, 0)
+mini.Size = UDim2.new(0, 50, 0, 59)
+mini.Font = Enum.Font.SourceSans
+mini.Text = "-"
+mini.TextColor3 = Color3.fromRGB(255, 255, 255)
+mini.TextScaled = true
+mini.TextSize = 14.000
+mini.TextWrapped = true
+
+ScriptHub.Name = "ScriptHub"
+ScriptHub.Parent = Executor
+ScriptHub.BackgroundColor3 = Color3.fromRGB(42, 42, 42)
+ScriptHub.BorderSizePixel = 0
+ScriptHub.Position = UDim2.new(1.00928426, 0, 0, 0)
+ScriptHub.Size = UDim2.new(0, 175, 0, 359)
+ScriptHub.ScrollBarThickness = 5
+
+MML.Name = "MML"
+MML.Parent = ScriptHub
+MML.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MML.BackgroundTransparency = 1.000
+MML.BorderSizePixel = 0
+MML.Size = UDim2.new(0, 175, 0, 28)
+MML.Font = Enum.Font.SourceSans
+MML.Text = "CR Admin"
+MML.TextColor3 = Color3.fromRGB(255, 255, 255)
+MML.TextScaled = true
+MML.TextSize = 14.000
+MML.TextWrapped = true
+
+DJ.Name = "DJ"
+DJ.Parent = ScriptHub
+DJ.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DJ.BackgroundTransparency = 1.000
+DJ.BorderSizePixel = 0
+DJ.Position = UDim2.new(0, 0, 0.0417827293, 0)
+DJ.Size = UDim2.new(0, 175, 0, 28)
+DJ.Font = Enum.Font.SourceSans
+DJ.Text = "DJ Speed"
+DJ.TextColor3 = Color3.fromRGB(255, 255, 255)
+DJ.TextScaled = true
+DJ.TextSize = 14.000
+DJ.TextWrapped = true
+
+Cop.Name = "Cop"
+Cop.Parent = ScriptHub
+Cop.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Cop.BackgroundTransparency = 1.000
+Cop.BorderSizePixel = 0
+Cop.Position = UDim2.new(0, 0, 0.0821727067, 0)
+Cop.Size = UDim2.new(0, 175, 0, 28)
+Cop.Font = Enum.Font.SourceSans
+Cop.Text = "Cop"
+Cop.TextColor3 = Color3.fromRGB(255, 255, 255)
+Cop.TextScaled = true
+Cop.TextSize = 14.000
+Cop.TextWrapped = true
+
+KERGUI.Name = "KERGUI"
+KERGUI.Parent = ScriptHub
+KERGUI.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+KERGUI.BackgroundTransparency = 1.000
+KERGUI.BorderSizePixel = 0
+KERGUI.Position = UDim2.new(0, 0, 0.121169925, 0)
+KERGUI.Size = UDim2.new(0, 175, 0, 28)
+KERGUI.Font = Enum.Font.SourceSans
+KERGUI.Text = "Kermit's Gui"
+KERGUI.TextColor3 = Color3.fromRGB(255, 255, 255)
+KERGUI.TextScaled = true
+KERGUI.TextSize = 14.000
+KERGUI.TextWrapped = true
+
+CharaX.Name = "CharaX"
+CharaX.Parent = ScriptHub
+CharaX.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CharaX.BackgroundTransparency = 1.000
+CharaX.BorderSizePixel = 0
+CharaX.Position = UDim2.new(0, 0, 0.160167143, 0)
+CharaX.Size = UDim2.new(0, 175, 0, 28)
+CharaX.Font = Enum.Font.SourceSans
+CharaX.Text = "Chara X"
+CharaX.TextColor3 = Color3.fromRGB(255, 255, 255)
+CharaX.TextScaled = true
+CharaX.TextSize = 14.000
+CharaX.TextWrapped = true
+
+Inferno.Name = "Inferno"
+Inferno.Parent = ScriptHub
+Inferno.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Inferno.BackgroundTransparency = 1.000
+Inferno.BorderSizePixel = 0
+Inferno.Position = UDim2.new(0, 0, 0.199164361, 0)
+Inferno.Size = UDim2.new(0, 175, 0, 28)
+Inferno.Font = Enum.Font.SourceSans
+Inferno.Text = "Inferno"
+Inferno.TextColor3 = Color3.fromRGB(255, 255, 255)
+Inferno.TextScaled = true
+Inferno.TextSize = 14.000
+Inferno.TextWrapped = true
+
+GSlayer.Name = "GSlayer"
+GSlayer.Parent = ScriptHub
+GSlayer.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GSlayer.BackgroundTransparency = 1.000
+GSlayer.BorderSizePixel = 0
+GSlayer.Position = UDim2.new(0, 0, 0.238161579, 0)
+GSlayer.Size = UDim2.new(0, 175, 0, 28)
+GSlayer.Font = Enum.Font.SourceSans
+GSlayer.Text = "God Slayer"
+GSlayer.TextColor3 = Color3.fromRGB(255, 255, 255)
+GSlayer.TextScaled = true
+GSlayer.TextSize = 14.000
+GSlayer.TextWrapped = true
+
+TGui.Name = "TGui"
+TGui.Parent = ScriptHub
+TGui.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TGui.BackgroundTransparency = 1.000
+TGui.BorderSizePixel = 0
+TGui.Position = UDim2.new(0, 0, 0.277158797, 0)
+TGui.Size = UDim2.new(0, 175, 0, 28)
+TGui.Font = Enum.Font.SourceSans
+TGui.Text = "Troll Gui"
+TGui.TextColor3 = Color3.fromRGB(255, 255, 255)
+TGui.TextScaled = true
+TGui.TextSize = 14.000
+TGui.TextWrapped = true
+
+NSG.Name = "NSG"
+NSG.Parent = ScriptHub
+NSG.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NSG.BackgroundTransparency = 1.000
+NSG.BorderSizePixel = 0
+NSG.Position = UDim2.new(0, 0, 0.316156, 0)
+NSG.Size = UDim2.new(0, 175, 0, 28)
+NSG.Font = Enum.Font.SourceSans
+NSG.Text = "Nebula Star Glitcher"
+NSG.TextColor3 = Color3.fromRGB(255, 255, 255)
+NSG.TextSize = 23.000
+NSG.TextWrapped = true
+
+Exo.Name = "Exo"
+Exo.Parent = ScriptHub
+Exo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Exo.BackgroundTransparency = 1.000
+Exo.BorderSizePixel = 0
+Exo.Position = UDim2.new(0, 0, 0.355153203, 0)
+Exo.Size = UDim2.new(0, 175, 0, 28)
+Exo.Font = Enum.Font.SourceSans
+Exo.Text = "Free Exoliner"
+Exo.TextColor3 = Color3.fromRGB(255, 255, 255)
+Exo.TextScaled = true
+Exo.TextSize = 23.000
+Exo.TextWrapped = true
+
+TRifle.Name = "TRifle"
+TRifle.Parent = ScriptHub
+TRifle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TRifle.BackgroundTransparency = 1.000
+TRifle.BorderSizePixel = 0
+TRifle.Position = UDim2.new(0, 0, 0.391364902, 0)
+TRifle.Size = UDim2.new(0, 175, 0, 28)
+TRifle.Font = Enum.Font.SourceSans
+TRifle.Text = "Trap Rifle"
+TRifle.TextColor3 = Color3.fromRGB(255, 255, 255)
+TRifle.TextScaled = true
+TRifle.TextSize = 23.000
+TRifle.TextWrapped = true
+
+-- Scripts:
+
+local function PPIVI_fake_script() -- Start.Script 
+	local script = Instance.new('LocalScript', Start)
+
+	local title = script.Parent.Title
+	local sound = Instance.new("Sound")
+	sound.Name = "Music"
+	sound.Parent = script.Parent
+	sound.SoundId = "rbxassetid://1836842889"
+	sound:Play()
+	local plr = game:GetService("Players").LocalPlayer
+	local plrGui = plr:WaitForChild("PlayerGui")
+	plrGui:SetTopbarTransparency(0)
+	local start = script.Parent.Start
+	local exit = script.Parent.Exit
+	local gui = script.Parent.Parent.Parent.BingoSSGui
+	
+	while true do
+		wait(1)
+		title.Rotation = 2
+		start.Rotation = 2
+		exit.Rotation = 2
+		wait(1)
+		title.Rotation = -2
+		start.Rotation = -2
+		exit.Rotation = -2
+	end
+	
+end
+coroutine.wrap(PPIVI_fake_script)()
+local function ECVLOD_fake_script() -- Start_2.LocalScript 
+	local script = Instance.new('LocalScript', Start_2)
+
+	local plr = game:GetService("Players").LocalPlayer
+	local plrGui = plr:WaitForChild("PlayerGui")
+	local show = script.Parent.Parent.Parent.Show
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		plrGui:SetTopbarTransparency(.5)
+		script.Parent.Parent:WaitForChild("Music"):Destroy()
+		show.Visible = true
+		script.Parent.Parent:Destroy()
+	end)
+end
+coroutine.wrap(ECVLOD_fake_script)()
+local function FBFQUOT_fake_script() -- Exit.LocalScript 
+	local script = Instance.new('LocalScript', Exit)
+
+	local gui = script.Parent.Parent.Parent.Parent.BingoSSGui
+	script.Parent.MouseButton1Click:Connect(function()
+		gui:Destroy()
+	end)
+end
+coroutine.wrap(FBFQUOT_fake_script)()
+local function IPVFZWG_fake_script() -- Show.LocalScript 
+	local script = Instance.new('LocalScript', Show)
+
+	local executor = script.Parent.Parent.Executor
+	local show = script.Parent
+	
+	script.Parent.MouseEnter:Connect(function()
+		script.Parent.BorderSizePixel = 5
+		script.Parent.BackgroundColor3 = Color3.fromRGB(22,22,22)
+		script.Parent.TextTransparency = .5
+	end)
+	
+	script.Parent.MouseLeave:Connect(function()
+		script.Parent.BorderSizePixel = 3
+		script.Parent.BackgroundColor3 = Color3.fromRGB(42,42,42)
+		script.Parent.TextTransparency = 0
+	end)
+	
+	show.MouseButton1Click:Connect(function()
+		show.Visible = false
+		executor.Visible = true
+	end)
+end
+coroutine.wrap(IPVFZWG_fake_script)()
+local function BHYQLPU_fake_script() -- Normal.LocalScript 
+	local script = Instance.new('LocalScript', Normal)
+
+	local mini = script.Parent.Parent.Parent.Minimized
+	local executor = script.Parent.Parent.Parent.Executor
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		executor.Position = mini.Position
+		mini.Visible = false
+		executor.Visible = true
+	end)
+end
+coroutine.wrap(BHYQLPU_fake_script)()
+local function RKOA_fake_script() -- BingoSSGui.draggable 
+	local script = Instance.new('Script', BingoSSGui)
+
+	local frame = script.Parent.Executor
+	
+	frame.Draggable = true
+	frame.Selectable = true
+	frame.Active = true
+	frame.RobloxLocked = false
+	
+	local frame0 = script.Parent.Minimized
+	
+	frame0.Draggable = true
+	frame0.Selectable = true
+	frame0.Active = true
+	frame0.RobloxLocked = false
+end
+coroutine.wrap(RKOA_fake_script)()
+local function YQHMDDA_fake_script() -- Execute.LocalScript 
+	local script = Instance.new('LocalScript', Execute)
+
+	script.Parent.MouseEnter:Connect(function()
+		script.Parent.BorderSizePixel = 5
+		script.Parent.BackgroundColor3 = Color3.fromRGB(22,22,22)
+		script.Parent.TextTransparency = .5
+	end)
+	
+	script.Parent.MouseLeave:Connect(function()
+		script.Parent.BorderSizePixel = 3
+		script.Parent.BackgroundColor3 = Color3.fromRGB(42,42,42)
+		script.Parent.TextTransparency = 0
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		local box = script.Parent.Parent.EditorFrame.Source
+		game:GetService("ReplicatedStorage").RemoteEvent:FireServer(box.Text)
+	end)
+end
+coroutine.wrap(YQHMDDA_fake_script)()
+local function LFZMWLB_fake_script() -- Clear.LocalScript 
+	local script = Instance.new('LocalScript', Clear)
+
+	script.Parent.MouseEnter:Connect(function()
+		script.Parent.BorderSizePixel = 5
+		script.Parent.BackgroundColor3 = Color3.fromRGB(22,22,22)
+		script.Parent.TextTransparency = .5
+	end)
+	
+	script.Parent.MouseLeave:Connect(function()
+		script.Parent.BorderSizePixel = 3
+		script.Parent.BackgroundColor3 = Color3.fromRGB(42,42,42)
+		script.Parent.TextTransparency = 0
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		local box = script.Parent.Parent.EditorFrame.Source
+		box.Text = ""
+	end)
+end
+coroutine.wrap(LFZMWLB_fake_script)()
+local function APJVWAG_fake_script() -- HideText.LocalScript 
+	local script = Instance.new('LocalScript', HideText)
+
+	local box = script.Parent.Parent.EditorFrame.Source
+	script.Parent.MouseEnter:Connect(function()
+		script.Parent.BorderSizePixel = 5
+		script.Parent.BackgroundColor3 = Color3.fromRGB(22,22,22)
+		script.Parent.TextTransparency = .5
+	end)
+	
+	script.Parent.MouseLeave:Connect(function()
+		script.Parent.BorderSizePixel = 3
+		script.Parent.BackgroundColor3 = Color3.fromRGB(42,42,42)
+		script.Parent.TextTransparency = 0
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.ShowText.Visible = true
+		script.Parent.Visible = false
+		box.TextTransparency = 1
+		box.Comments_.Visible = false
+		box.Globals_.Visible = false
+		box.Keywords_.Visible = false
+		box.Numbers_.Visible = false
+		box.RemoteHighlight_.Visible = false
+		box.Strings_.Visible = false
+		box.Tokens_.Visible = false
+	end)
+end
+coroutine.wrap(APJVWAG_fake_script)()
+local function AIZVHDR_fake_script() -- ShowText.LocalScript 
+	local script = Instance.new('LocalScript', ShowText)
+
+	local box = script.Parent.Parent.EditorFrame.Source
+	script.Parent.MouseEnter:Connect(function()
+		script.Parent.BorderSizePixel = 5
+		script.Parent.BackgroundColor3 = Color3.fromRGB(22,22,22)
+		script.Parent.TextTransparency = .5
+	end)
+	
+	script.Parent.MouseLeave:Connect(function()
+		script.Parent.BorderSizePixel = 3
+		script.Parent.BackgroundColor3 = Color3.fromRGB(42,42,42)
+		script.Parent.TextTransparency = 0
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.HideText.Visible = true
+		script.Parent.Visible = false
+		box.TextTransparency = 0
+		box.Comments_.Visible = true
+		box.Globals_.Visible = true
+		box.Keywords_.Visible = true
+		box.Numbers_.Visible = true
+		box.RemoteHighlight_.Visible = true
+		box.Strings_.Visible = true
+		box.Tokens_.Visible = true
+	end)
+end
+coroutine.wrap(AIZVHDR_fake_script)()
+local function ALLWH_fake_script() -- R6.LocalScript 
+	local script = Instance.new('LocalScript', R6)
+
+	local remote = game:GetService("ReplicatedStorage").RemoteEvent
+	local plr = game:GetService("Players").LocalPlayer
+	
+	script.Parent.MouseEnter:Connect(function()
+		script.Parent.BorderSizePixel = 5
+		script.Parent.BackgroundColor3 = Color3.fromRGB(22,22,22)
+		script.Parent.TextTransparency = .5
+	end)
+	
+	script.Parent.MouseLeave:Connect(function()
+		script.Parent.BorderSizePixel = 3
+		script.Parent.BackgroundColor3 = Color3.fromRGB(42,42,42)
+		script.Parent.TextTransparency = 0
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		remote:FireServer("require(3041175937):r6('"..plr.Name.."')")
+	end)
+end
+coroutine.wrap(ALLWH_fake_script)()
+local function SFRJB_fake_script() -- Executor.LocalScript 
+	local script = Instance.new('LocalScript', Executor)
+
+	local lua_keywords = {"and", "break", "do", "else", "elseif", "end", "false", "for", "function", "goto", "if", "in", "local", "nil", "not", "or", "repeat", "return", "then", "true", "until", "while"}
+	local global_env = {"getrawmetatable", "game", "workspace", "script", "math", "string", "table", "print", "wait", "BrickColor", "Color3", "next", "pairs", "ipairs", "select", "unpack", "Instance", "Vector2", "Vector3", "CFrame", "Ray", "UDim2", "Enum", "assert", "error", "warn", "tick", "loadstring", "_G", "shared", "getfenv", "setfenv", "newproxy", "setmetatable", "getmetatable", "os", "debug", "pcall", "ypcall", "xpcall", "rawequal", "rawset", "rawget", "tonumber", "tostring", "type", "typeof", "_VERSION", "coroutine", "delay", "require", "spawn", "LoadLibrary", "settings", "stats", "time", "UserSettings", "version", "Axes", "ColorSequence", "Faces", "ColorSequenceKeypoint", "NumberRange", "NumberSequence", "NumberSequenceKeypoint", "gcinfo", "elapsedTime", "collectgarbage", "PhysicalProperties", "Rect", "Region3", "Region3int16", "UDim", "Vector2int16", "Vector3int16"}
+	
+	local Source = script.Parent.EditorFrame.Source
+	local Lines = Source.Parent.Lines
+	
+	local Highlight = function(string, keywords)
+	    local K = {}
+	    local S = string
+	    local Token =
+	    {
+	        ["="] = true,
+	        ["."] = true,
+	        [","] = true,
+	        ["("] = true,
+	        [")"] = true,
+	        ["["] = true,
+	        ["]"] = true,
+	        ["{"] = true,
+	        ["}"] = true,
+	        [":"] = true,
+	        ["*"] = true,
+	        ["/"] = true,
+	        ["+"] = true,
+	        ["-"] = true,
+	        ["%"] = true,
+			[";"] = true,
+			["~"] = true
+	    }
+	    for i, v in pairs(keywords) do
+	        K[v] = true
+	    end
+	    S = S:gsub(".", function(c)
+	        if Token[c] ~= nil then
+	            return "\32"
+	        else
+	            return c
+	        end
+	    end)
+	    S = S:gsub("%S+", function(c)
+	        if K[c] ~= nil then
+	            return c
+	        else
+	            return (" "):rep(#c)
+	        end
+	    end)
+	  
+	    return S
+	end
+	
+	local hTokens = function(string)
+	    local Token =
+	    {
+	        ["="] = true,
+	        ["."] = true,
+	        [","] = true,
+	        ["("] = true,
+	        [")"] = true,
+	        ["["] = true,
+	        ["]"] = true,
+	        ["{"] = true,
+	        ["}"] = true,
+	        [":"] = true,
+	        ["*"] = true,
+	        ["/"] = true,
+	        ["+"] = true,
+	        ["-"] = true,
+	        ["%"] = true,
+			[";"] = true,
+			["~"] = true
+	    }
+	    local A = ""
+	    string:gsub(".", function(c)
+	        if Token[c] ~= nil then
+	            A = A .. c
+	        elseif c == "\n" then
+	            A = A .. "\n"
+			elseif c == "\t" then
+				A = A .. "\t"
+	        else
+	            A = A .. "\32"
+	        end
+	    end)
+	  
+	    return A
+	end
+	
+	
+	local strings = function(string)
+	    local highlight = ""
+	    local quote = false
+	    string:gsub(".", function(c)
+	        if quote == false and c == "\"" then
+	            quote = true
+	        elseif quote == true and c == "\"" then
+	            quote = false
+	        end
+	        if quote == false and c == "\"" then
+	            highlight = highlight .. "\""
+	        elseif c == "\n" then
+	            highlight = highlight .. "\n"
+			elseif c == "\t" then
+			    highlight = highlight .. "\t"
+	        elseif quote == true then
+	            highlight = highlight .. c
+	        elseif quote == false then
+	            highlight = highlight .. "\32"
+	        end
+	    end)
+	  
+	    return highlight
+	end
+	
+	local comments = function(string)
+	    local ret = ""
+	    string:gsub("[^\r\n]+", function(c)
+	        local comm = false
+	        local i = 0
+	        c:gsub(".", function(n)
+	            i = i + 1
+	            if c:sub(i, i + 1) == "--" then
+	                comm = true
+	            end
+	            if comm == true then
+	                ret = ret .. n
+	            else
+	                ret = ret .. "\32"
+	            end
+	        end)
+	        ret = ret
+	    end)
+	    
+	    return ret
+	end
+	
+	local numbers = function(string)
+	    local A = ""
+	    string:gsub(".", function(c)
+	        if tonumber(c) ~= nil then
+	            A = A .. c
+	        elseif c == "\n" then
+	            A = A .. "\n"
+			elseif c == "\t" then
+				A = A .. "\t"
+	        else
+	            A = A .. "\32"
+	        end
+	    end)
+	  
+	    return A
+	end
+	
+	local highlight_source = function(type)
+		if type == "Text" then
+			Source.Text = Source.Text:gsub("\13", "")
+			Source.Text = Source.Text:gsub("\t", "      ")
+			local s = Source.Text
+			Source.Keywords_.Text = Highlight(s, lua_keywords)
+			Source.Globals_.Text = Highlight(s, global_env)
+			Source.RemoteHighlight_.Text = Highlight(s, {"FireServer", "fireServer", "InvokeServer", "invokeServer"})
+			Source.Tokens_.Text = hTokens(s)
+			Source.Numbers_.Text = numbers(s)
+			Source.Strings_.Text = strings(s)
+			local lin = 1
+			s:gsub("\n", function()
+				lin = lin + 1
+			end)
+			Lines.Text = ""
+			for i = 1, lin do
+				Lines.Text = Lines.Text .. i .. "\n"
+			end
+		end
+	end
+	
+	highlight_source("Text")
+	
+	Source.Changed:Connect(highlight_source)
+	
+	
+end
+coroutine.wrap(SFRJB_fake_script)()
+local function TFFJBE_fake_script() -- exitexecutor.LocalScript 
+	local script = Instance.new('LocalScript', exitexecutor)
+
+	local show = script.Parent.Parent.Parent.Show
+	local executor = script.Parent.Parent.Parent.Executor
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		show.Visible = true
+		executor.Visible = false
+	end)
+end
+coroutine.wrap(TFFJBE_fake_script)()
+local function QJYHK_fake_script() -- mini.LocalScript 
+	local script = Instance.new('LocalScript', mini)
+
+	local mini = script.Parent.Parent.Parent.Minimized
+	local executor = script.Parent.Parent.Parent.Executor
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		mini.Position = executor.Position
+		mini.Visible = true
+		executor.Visible = false
+	end)
+end
+coroutine.wrap(QJYHK_fake_script)()
+local function WSDGYR_fake_script() -- MML.LocalScript 
+	local script = Instance.new('LocalScript', MML)
+
+	local box = script.Parent.Parent.Parent.EditorFrame.Source
+	local plr = game:GetService("Players").LocalPlayer
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		box.Text = 'require(2808676257):hack"'..plr.Name..'"'
+	end)
+end
+coroutine.wrap(WSDGYR_fake_script)()
+local function QZCI_fake_script() -- DJ.LocalScript 
+	local script = Instance.new('LocalScript', DJ)
+
+	local box = script.Parent.Parent.Parent.EditorFrame.Source
+	local plr = game:GetService("Players").LocalPlayer
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		box.Text = 'require(3090364434):Fire("'..plr.Name..'")'
+	end)
+end
+coroutine.wrap(QZCI_fake_script)()
+local function LBEAF_fake_script() -- Cop.LocalScript 
+	local script = Instance.new('LocalScript', Cop)
+
+	local box = script.Parent.Parent.Parent.EditorFrame.Source
+	local plr = game:GetService("Players").LocalPlayer
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		box.Text = 'require(2874956884):Fire("'..plr.Name..'")'
+	end)
+end
+coroutine.wrap(LBEAF_fake_script)()
+local function WCSUM_fake_script() -- KERGUI.LocalScript 
+	local script = Instance.new('LocalScript', KERGUI)
+
+	local box = script.Parent.Parent.Parent.EditorFrame.Source
+	local plr = game:GetService("Players").LocalPlayer
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		box.Text = 'require(2797382794):Kermit("'..plr.Name..'") -- KEY IS: kermitscuba'
+	end)
+end
+coroutine.wrap(WCSUM_fake_script)()
+local function XFQOZ_fake_script() -- CharaX.LocalScript 
+	local script = Instance.new('LocalScript', CharaX)
+
+	local box = script.Parent.Parent.Parent.EditorFrame.Source
+	local plr = game:GetService("Players").LocalPlayer
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		box.Text = 'require(2966195744):Fire("'..plr.Name..'")'
+	end)
+end
+coroutine.wrap(XFQOZ_fake_script)()
+local function CPMCEG_fake_script() -- Inferno.LocalScript 
+	local script = Instance.new('LocalScript', Inferno)
+
+	local box = script.Parent.Parent.Parent.EditorFrame.Source
+	local plr = game:GetService("Players").LocalPlayer
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		box.Text = 'require(2969919470):Fire("'..plr.Name..'")'
+	end)
+end
+coroutine.wrap(CPMCEG_fake_script)()
+local function XWBH_fake_script() -- GSlayer.LocalScript 
+	local script = Instance.new('LocalScript', GSlayer)
+
+	local box = script.Parent.Parent.Parent.EditorFrame.Source
+	local plr = game:GetService("Players").LocalPlayer
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		box.Text = 'require(2969861340):Fire("'..plr.Name..'")'
+	end)
+end
+coroutine.wrap(XWBH_fake_script)()
+local function XUYWO_fake_script() -- TGui.LocalScript 
+	local script = Instance.new('LocalScript', TGui)
+
+	local box = script.Parent.Parent.Parent.EditorFrame.Source
+	local plr = game:GetService("Players").LocalPlayer
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		box.Text = 'require(2500686011).load"'..plr.Name..'"'
+	end)
+end
+coroutine.wrap(XUYWO_fake_script)()
+local function HANJXV_fake_script() -- NSG.LocalScript 
+	local script = Instance.new('LocalScript', NSG)
+
+	local box = script.Parent.Parent.Parent.EditorFrame.Source
+	local plr = game:GetService("Players").LocalPlayer
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		box.Text = 'require(03641374705).load"'..plr.Name..'"'
+	end)
+end
+coroutine.wrap(HANJXV_fake_script)()
+local function ECFS_fake_script() -- Exo.LocalScript 
+	local script = Instance.new('LocalScript', Exo)
+
+	local box = script.Parent.Parent.Parent.EditorFrame.Source
+	local plr = game:GetService("Players").LocalPlayer
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		box.Text = 'require(3610631466):Exoliner("TeefusIsGayLMFAO","'..plr.Name..'")'
+	end)
+end
+coroutine.wrap(ECFS_fake_script)()
+local function SDEMTKX_fake_script() -- TRifle.LocalScript 
+	local script = Instance.new('LocalScript', TRifle)
+
+	local box = script.Parent.Parent.Parent.EditorFrame.Source
+	local plr = game:GetService("Players").LocalPlayer
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		box.Text = 'require(2845325548).uwu(game.Players.'..plr.Name..')'
+	end)
+end
+coroutine.wrap(SDEMTKX_fake_script)()
+-- end
